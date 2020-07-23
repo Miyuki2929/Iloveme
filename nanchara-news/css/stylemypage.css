@@ -1,0 +1,166 @@
+@charset "utf-8";
+* {
+    margin: 0;
+	padding: 0;
+}
+
+body{
+    font-size: 16px;
+    font-size: 1rem;
+    font-family: 'Kosugi Maru',
+    "Helvetica Neue",
+    /* "Arial", なんかこいつだけレイアウトに影響する*/
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+    color: #777;
+    background-color: #efefef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {    
+    position: relative;
+	max-width: 1280px;
+	width: 1280px;
+}
+
+.logout-b {
+    position: relative;
+}
+
+a.bt-samp12{
+	position: relative;
+	display: block;
+	height: 35px;
+	width: 120px;
+	text-decoration: none;
+	background: #fdc689;
+	color: #fff;
+	line-height: 37px;
+	text-align: center;
+	border-radius: 3px;
+	box-shadow: 1px 2px 4px #d4842c;
+  }
+  a.bt-samp12:active{
+	-ms-transform: translateY(2px);
+	-webkit-transform: translateY(2px);
+	transform: translateY(2px);
+	box-shadow:none;
+	text-align: right;
+  }
+
+h1 {
+    font-family: "Nico Moji";
+    position:absolute;
+    top:2%;
+    right: 2%;
+}
+
+/* タブ */
+.cp_tab *, .cp_tab *:before, .cp_tab *:after {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.cp_tab {
+	margin: 1em auto;
+	width: 100%;
+}
+.cp_tab > input[type='radio'] {
+	margin: 0;
+	padding: 0;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	background: none;
+	-webkit-appearance: none;
+	        appearance: none;
+	display: none;
+}
+.cp_tab .cp_tabpanel {
+	display: none;
+}
+.cp_tab > input:first-child:checked ~ .cp_tabpanels > .cp_tabpanel:first-child,
+.cp_tab > input:nth-child(3):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(2),
+.cp_tab > input:nth-child(5):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(3),
+.cp_tab > input:nth-child(7):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(4),
+.cp_tab > input:nth-child(9):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(5),
+.cp_tab > input:nth-child(11):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(6) {
+	display: block;
+}
+.cp_tab > label {
+	position: relative;
+	display: inline-block;
+	padding: 15px;
+	cursor: pointer;
+	border: 1px solid transparent;
+	border-bottom: 0;
+}
+.cp_tab > label:hover,
+.cp_tab > input:focus + label {
+	color: #0066cc;
+}
+.cp_tab > input:checked + label {
+	margin-bottom: -1px;
+	border-color: #cccccc;
+	border-bottom: 1px solid #efefef;
+	border-radius: 6px 6px 0 0;
+}
+.cp_tab .cp_tabpanel {
+	width: 100%;
+	min-height: 400px;
+	padding: 0.5em 1em;
+	border: 1px solid #cccccc;
+	border-radius: 0 6px 6px 6px;
+}
+@media (max-width: 480px) {
+	.cp_tab {
+		width: 100%;
+		font-size: 0.8em;
+	}
+	.cp_tab label {
+		padding: 0.5em;
+	}
+}
+
+table{
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+  }  
+    
+table tr{
+	border-bottom: solid 1px #eee;
+    cursor: pointer;
+  }
+  
+table tr:hover{
+	background-color: #d4f0fd;
+  }
+
+table th,table td{
+	text-align: center;
+	width: 20%;
+	padding: 15px 0;
+  }
+  
+table td.icon{
+	background-size: 35px;
+	background-position: left 5px center;
+	background-repeat: no-repeat;
+	padding-left: 30px;
+  }
+  
+table td.icon.bird{
+	background-image: url(../09_11_KITAJIMA/Edit.png)
+  }
+  
+table td.icon.whale{
+	background-image: url(icon-whale.png)
+  }
+  
+table td.icon.crab{
+	background-image: url(icon-crab.png)
+  }
